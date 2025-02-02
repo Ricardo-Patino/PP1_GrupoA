@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PP1_GrupoA", "PP1_GrupoA\PP1_GrupoA.csproj", "{D86E0EAF-B68B-42D4-9F1E-9F6DCEC5D116}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramacionAvanzada", "PP1_GrupoA\ProgramacionAvanzada.csproj", "{D86E0EAF-B68B-42D4-9F1E-9F6DCEC5D116}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
