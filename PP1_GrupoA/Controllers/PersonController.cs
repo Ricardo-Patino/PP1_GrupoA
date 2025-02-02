@@ -9,20 +9,68 @@ namespace PP1_GrupoA.Controllers
 {
     public class PersonController : Controller
     {
-        private List<Person> person = new List<Person>
+        private static List<Person> persons = new List<Person>
         {
-            new Person { Id = "1", Name = "Alice", Description = "Engineer", DateCreated = DateTime.Now },
-            new Person { Id = "2", Name = "Bob", Description = "Doctor", DateCreated = DateTime.Now },
-            new Person { Id = "3", Name = "Charlie", Description = "Artist", DateCreated = DateTime.Now },
-            new Person { Id = "4", Name = "David", Description = "Musician", DateCreated = DateTime.Now },
-            new Person { Id = "5", Name = "Emma", Description = "Designer", DateCreated = DateTime.Now },
-            new Person { Id = "6", Name = "Frank", Description = "Writer", DateCreated = DateTime.Now },
-            new Person { Id = "7", Name = "Grace", Description = "Photographer", DateCreated = DateTime.Now },
-            new Person { Id = "8", Name = "Hank", Description = "Chef", DateCreated = DateTime.Now },
-            new Person { Id = "9", Name = "Ivy", Description = "Nurse", DateCreated = DateTime.Now },
-            new Person { Id = "10", Name = "Jack", Description = "Scientist", DateCreated = DateTime.Now }
+            new Person { Id = "1", Nombre = "Alice", Descripcion = "Ingeniera", FechaCreacion = DateTime.Now },
+            new Person { Id = "2", Nombre = "Bob", Descripcion = "Doctor", FechaCreacion = DateTime.Now },
+            new Person { Id = "3", Nombre = "Charlie", Descripcion = "Artista", FechaCreacion = DateTime.Now },
+            new Person { Id = "4", Nombre = "David", Descripcion = "Músico", FechaCreacion = DateTime.Now },
+            new Person { Id = "5", Nombre = "Emma", Descripcion = "Diseñadora", FechaCreacion = DateTime.Now },
+            new Person { Id = "6", Nombre = "Frank", Descripcion = "Escritor", FechaCreacion = DateTime.Now },
+            new Person { Id = "7", Nombre = "Grace", Descripcion = "Fotógrafa", FechaCreacion = DateTime.Now },
+            new Person { Id = "8", Nombre = "Hank", Descripcion = "Chef", FechaCreacion = DateTime.Now },
+            new Person { Id = "9", Nombre = "Ivy", Descripcion = "Enfermera", FechaCreacion = DateTime.Now },
+            new Person { Id = "10", Nombre = "Jack", Descripcion = "Científico", FechaCreacion = DateTime.Now }
         };
 
+        [Route("persons/lista")]
+        public ActionResult Lista()
+        {
+            var persons = ObtenerTodasLasPersons();
+            return View(persons);
+        }
 
+        [Route("persons/detalles/{id}")]
+        public ActionResult Detalles(string id)
+        {
+            var person = ObtenerPersonPorId(id);
+            if (person == null)
+            {
+                return View("PersonNoEncontrada");
+            }
+            return View(person);
+        }
+
+        [HttpPost]
+        [Route("persons/detalles/{id}")]
+        public ActionResult Detalles(Person person)
+        {
+            if (ModelState.IsValid)
+            {
+                ActualizarPerson(person);
+            }
+            return View(person);
+        }
+
+        private static List<Person> ObtenerTodasLasPersons()
+        {
+            return persons;
+        }
+
+        private static Person ObtenerPersonPorId(string id)
+        {
+            return persons.FirstOrDefault(p => p.Id == id);
+        }
+
+        private static void ActualizarPerson(Person person)
+        {
+            var personExistente = ObtenerPersonPorId(person.Id);
+            if (personExistente != null)
+            {
+                personExistente.Nombre = person.Nombre;
+                personExistente.Descripcion = person.Descripcion;
+                personExistente.FechaCreacion = person.FechaCreacion;
+            }
+        }
     }
 }
