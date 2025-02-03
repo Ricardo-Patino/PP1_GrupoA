@@ -1,0 +1,38 @@
+﻿@model List<PP1_GrupoA.Models.Car>
+@using System.Linq
+<h2 class="my-4">Lista de Autos</h2>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr class="@(int.Parse(car.Id) % 2 == 0 ? "table-primary" : "table-success")">
+                <td>@car.Id</td>
+                <td>@car.Nombre</td>
+                <td>@car.Descripcion</td>
+                <td>@car.Marca</td>
+                <td>@car.Modelo</td>
+                <td>@car.Año</td>
+                <td>@car.Precio</td>
+            </tr>
+            @if (int.Parse(car.Id) % 2 != 0)
+            {
+                <tr>
+                    <td colspan="7" class="text-danger">Este auto tiene un ID impar</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
