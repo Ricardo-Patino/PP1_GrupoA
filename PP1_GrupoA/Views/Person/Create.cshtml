@@ -1,7 +1,21 @@
-﻿@using (Html.BeginForm("Create", "Person", FormMethod.Post))
-{
-    <label>Nombre:</label>
-    <input type="text" name="name" required />
-    <button type="submit">Guardar</button>
+﻿
+@model PP1_GrupoA.Models.Person
+
+@{
+    ViewBag.Title = "Crear Persona";
 }
 
+<h2>Agregar Persona</h2>
+
+@using (Html.BeginForm("Create", "Person", FormMethod.Post))
+{
+    @Html.LabelFor(model => model.Nombre)
+    @Html.TextBoxFor(model => model.Nombre)
+    <br />
+
+    @Html.LabelFor(model => model.Descripcion)
+    @Html.TextBoxFor(model => model.Descripcion)
+    <br />
+
+    <input type="submit" value="Agregar Persona" />
+}

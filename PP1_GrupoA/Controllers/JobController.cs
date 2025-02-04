@@ -30,6 +30,31 @@ namespace PP1_GrupoA.Controllers
             return View(jobs);
         }
 
+
+        [Route("jobs/create")]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("jobs/create")]
+        public ActionResult Crear(Job job)
+        {
+            if (ModelState.IsValid)
+            {
+                int nuevoId = jobs.Count > 0 ? jobs.Max(c => int.Parse(c.Id)) + 1 : 1;
+                job.Id = nuevoId.ToString();
+                job.FechaCreacion = DateTime.Now;
+                jobs.Add(job);
+
+                return RedirectToAction("Index");
+            }
+
+            return View(job);
+        }
+
+
         [Route("jobs/detalles/{id}")]
         public ActionResult Detalles(string id)
         {

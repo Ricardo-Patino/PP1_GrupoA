@@ -30,6 +30,31 @@ namespace PP1_GrupoA.Controllers
             return View(cars);
         }
 
+
+        [Route("cars/create")]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("cars/create")]
+        public ActionResult Crear(Car car)
+        {
+            if (ModelState.IsValid)
+            {
+                int nuevoId = cars.Count > 0 ? cars.Max(c => int.Parse(c.Id)) + 1 : 1;
+                car.Id = nuevoId.ToString();
+
+                cars.Add(car);
+
+                return RedirectToAction("Index");
+            }
+
+            return View(car);
+        }
+
+
         [Route("cars/detalles/{id}")]
         public ActionResult Detalles(string id)
         {

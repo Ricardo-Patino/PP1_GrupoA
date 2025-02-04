@@ -1,7 +1,20 @@
-﻿@using (Html.BeginForm("Create", "Job", FormMethod.Post))
-{
-    <label>Título:</label>
-    <input type="text" name="title" required />
-    <button type="submit">Guardar</button>
+﻿@model PP1_GrupoA.Models.Job
+
+@{
+    ViewBag.Title = "Crear Job";
 }
 
+<h2>Agregar Auto</h2>
+
+@using (Html.BeginForm("Create", "Job", FormMethod.Post))
+{
+    @Html.LabelFor(model => model.Nombre)
+    @Html.TextBoxFor(model => model.Nombre)
+    <br />
+
+    @Html.LabelFor(model => model.Descripcion)
+    @Html.TextBoxFor(model => model.Descripcion)
+    <br />
+
+    <input type="submit" value="Agregar Job" />
+}
