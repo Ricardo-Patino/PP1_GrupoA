@@ -24,7 +24,7 @@ namespace PP1_GrupoA.Controllers
         };
 
         [Route("persons/lista")]
-        public ActionResult Lista()
+        public ActionResult Index()
         {
             var persons = ObtenerTodasLasPersons();
             return View(persons);

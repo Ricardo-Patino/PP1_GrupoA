@@ -27,7 +27,7 @@
                 <td>@car.Año</td>
                 <td>@car.Precio</td>
             </tr>
-            @if (int.Parse(car.Id) % 2 != 0)
+            if (int.Parse(car.Id) % 2 != 0)
             {
                 <tr>
                     <td colspan="7" class="text-danger">Este auto tiene un ID impar</td>

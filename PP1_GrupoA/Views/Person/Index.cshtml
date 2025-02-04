@@ -29,7 +29,7 @@
                     <td>@(DateTime.Now.Year - person.FechaNacimiento.Year)</td>
                 </tr>
 
-                @if (int.Parse(person.Id) % 2 != 0)
+                if (int.Parse(person.Id) % 2 != 0)
                 {
                     <tr>
                         <td colspan="7" class="text-danger">Esta persona tiene un ID impar</td>

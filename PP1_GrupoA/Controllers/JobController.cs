@@ -24,7 +24,7 @@ namespace PP1_GrupoA.Controllers
         };
 
         [Route("jobs/lista")]
-        public ActionResult Lista()
+        public ActionResult Index()
         {
             var jobs = ObtenerTodosLosJobs();
             return View(jobs);
