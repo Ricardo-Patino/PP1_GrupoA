@@ -45,7 +45,7 @@ namespace PP1_GrupoA.Controllers
             {
                 int nuevoId = cars.Count > 0 ? cars.Max(c => int.Parse(c.Id)) + 1 : 1;
                 car.Id = nuevoId.ToString();
-
+                car.FechaCreacion = DateTime.Now;
                 cars.Add(car);
 
                 return RedirectToAction("Index");

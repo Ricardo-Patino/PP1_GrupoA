@@ -11,16 +11,16 @@ namespace PP1_GrupoA.Controllers
     {
         private static List<Person> persons = new List<Person>
         {
-            new Person { Id = "1", Nombre = "Alice", Descripcion = "Ingeniera", FechaCreacion = DateTime.Now },
-            new Person { Id = "2", Nombre = "Bob", Descripcion = "Doctor", FechaCreacion = DateTime.Now },
-            new Person { Id = "3", Nombre = "Charlie", Descripcion = "Artista", FechaCreacion = DateTime.Now },
-            new Person { Id = "4", Nombre = "David", Descripcion = "Músico", FechaCreacion = DateTime.Now },
-            new Person { Id = "5", Nombre = "Emma", Descripcion = "Diseñadora", FechaCreacion = DateTime.Now },
-            new Person { Id = "6", Nombre = "Frank", Descripcion = "Escritor", FechaCreacion = DateTime.Now },
-            new Person { Id = "7", Nombre = "Grace", Descripcion = "Fotógrafa", FechaCreacion = DateTime.Now },
-            new Person { Id = "8", Nombre = "Hank", Descripcion = "Chef", FechaCreacion = DateTime.Now },
-            new Person { Id = "9", Nombre = "Ivy", Descripcion = "Enfermera", FechaCreacion = DateTime.Now },
-            new Person { Id = "10", Nombre = "Jack", Descripcion = "Científico", FechaCreacion = DateTime.Now }
+            new Person { Id = "1", Nombre = "Alice", Apellido = "Ramos", Descripcion = "Ingeniera", FechaCreacion = DateTime.Now },
+            new Person { Id = "2", Nombre = "Bob", Apellido = "Fonseca",Descripcion = "Doctor", FechaCreacion = DateTime.Now },
+            new Person { Id = "3", Nombre = "Charlie",Apellido = "Castro", Descripcion = "Artista", FechaCreacion = DateTime.Now },
+            new Person { Id = "4", Nombre = "David", Apellido = "Pacheco",Descripcion = "Músico", FechaCreacion = DateTime.Now },
+            new Person { Id = "5", Nombre = "Emma", Apellido = "Brown",Descripcion = "Diseñadora", FechaCreacion = DateTime.Now },
+            new Person { Id = "6", Nombre = "Frank", Apellido = "Arce", Descripcion = "Escritor", FechaCreacion = DateTime.Now },
+            new Person { Id = "7", Nombre = "Grace", Apellido = "Vega", Descripcion = "Fotógrafa", FechaCreacion = DateTime.Now },
+            new Person { Id = "8", Nombre = "Hank", Apellido = "Ramirez", Descripcion = "Chef", FechaCreacion = DateTime.Now },
+            new Person { Id = "9", Nombre = "Ivy", Apellido = "Benavidez",Descripcion = "Enfermera", FechaCreacion = DateTime.Now },
+            new Person { Id = "10", Nombre = "Jack", Apellido = "Chavez",Descripcion = "Científico", FechaCreacion = DateTime.Now }
         };
 
         [Route("persons/lista")]
@@ -93,6 +93,7 @@ namespace PP1_GrupoA.Controllers
             if (personExistente != null)
             {
                 personExistente.Nombre = person.Nombre;
+                personExistente.Apellido = person.Apellido;
                 personExistente.Descripcion = person.Descripcion;
                 personExistente.FechaCreacion = person.FechaCreacion;
             }

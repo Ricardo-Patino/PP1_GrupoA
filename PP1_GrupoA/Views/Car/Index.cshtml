@@ -7,8 +7,6 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
             <th>Marca</th>
             <th>Modelo</th>
             <th>Año</th>
@@ -20,8 +18,6 @@
         {
             <tr class="@(int.Parse(car.Id) % 2 == 0 ? "table-primary" : "table-success")">
                 <td>@car.Id</td>
-                <td>@car.Nombre</td>
-                <td>@car.Descripcion</td>
                 <td>@car.Marca</td>
                 <td>@car.Modelo</td>
                 <td>@car.Año</td>

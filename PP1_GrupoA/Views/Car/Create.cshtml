@@ -8,12 +8,12 @@
 
 @using (Html.BeginForm("Create", "Car", FormMethod.Post))
 {
-    @Html.LabelFor(model => model.Nombre)
-    @Html.TextBoxFor(model => model.Nombre)
+    @Html.LabelFor(model => model.Marca)
+    @Html.TextBoxFor(model => model.Marca)
     <br />
 
-    @Html.LabelFor(model => model.Descripcion)
-    @Html.TextBoxFor(model => model.Descripcion)
+    @Html.LabelFor(model => model.Modelo)
+    @Html.TextBoxFor(model => model.Modelo)
     <br />
 
     <input type="submit" value="Agregar Carro" />

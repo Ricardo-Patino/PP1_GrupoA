@@ -8,10 +8,10 @@
         <thead class="table-dark">
             <tr>
                 <th>ID</th>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Estado</th>
+                <th>Puesto</th>
+                <th>Funciones</th>
                 <th>Fecha de Creación</th>
+                <th>Fecha de Modificación</th>
             </tr>
         </thead>
         <tbody>
@@ -21,14 +21,14 @@
                     <td>@job.Id</td>
                     <td>@job.Nombre</td>
                     <td>@job.Descripcion</td>
-                    <td>@job.Estado</td>
                     <td>@job.FechaCreacion</td>
+                    <td>@job.FechaModificacion</td>
                 </tr>
 
                 if (int.Parse(job.Id) % 2 != 0)
                 {
                     <tr>
-                        <td colspan="5" class="text-danger">Este trabajo tiene un ID impar</td>
+                        <td colspan="5" class="text-danger">El trabajo anterior tiene un ID impar</td>
                     </tr>
                 }
             }

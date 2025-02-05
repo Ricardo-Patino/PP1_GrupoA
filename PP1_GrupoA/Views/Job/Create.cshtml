@@ -16,5 +16,17 @@
     @Html.TextBoxFor(model => model.Descripcion)
     <br />
 
+    @Html.LabelFor(model => model.Estado)
+    @Html.TextBoxFor(model => model.Estado)
+    <br />
+
+    @Html.LabelFor(model => model.FechaCreacion)
+    @Html.TextBoxFor(model => model.FechaCreacion)
+    <br />
+
+    @Html.LabelFor(model => model.FechaModificacion)
+    @Html.TextBoxFor(model => model.FechaModificacion)
+    <br />
+
     <input type="submit" value="Agregar Job" />
 }
