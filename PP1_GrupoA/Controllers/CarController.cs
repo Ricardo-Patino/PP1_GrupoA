@@ -11,16 +11,16 @@ namespace PP1_GrupoA.Controllers
     {
         private static List<Car> cars = new List<Car>
         {
-            new Car { Id = "1", Nombre = "Toyota", Descripcion = "Sedán", FechaCreacion = DateTime.Now },
-            new Car { Id = "2", Nombre = "Honda", Descripcion = "SUV", FechaCreacion = DateTime.Now },
-            new Car { Id = "3", Nombre = "Ford", Descripcion = "Camioneta", FechaCreacion = DateTime.Now },
-            new Car { Id = "4", Nombre = "Chevrolet", Descripcion = "Coupé", FechaCreacion = DateTime.Now },
-            new Car { Id = "5", Nombre = "BMW", Descripcion = "Convertible", FechaCreacion = DateTime.Now },
-            new Car { Id = "6", Nombre = "Mercedes", Descripcion = "Lujo", FechaCreacion = DateTime.Now },
-            new Car { Id = "7", Nombre = "Tesla", Descripcion = "Eléctrico", FechaCreacion = DateTime.Now },
-            new Car { Id = "8", Nombre = "Mazda", Descripcion = "Hatchback", FechaCreacion = DateTime.Now },
-            new Car { Id = "9", Nombre = "Nissan", Descripcion = "Crossover", FechaCreacion = DateTime.Now },
-            new Car { Id = "10", Nombre = "Hyundai", Descripcion = "Compacto", FechaCreacion = DateTime.Now }
+            new Car { Id = "1", Nombre = "Toyota", Modelo = "Sedán", Año = "2000", Precio = "$5000", FechaCreacion = DateTime.Now },
+            new Car { Id = "2", Nombre = "Honda", Modelo = "SUV", Año = "2010", Precio = "$5000", FechaCreacion = DateTime.Now },
+            new Car { Id = "3", Nombre = "Ford", Modelo = "Camioneta", Año = "2005", Precio = "$5000", FechaCreacion = DateTime.Now },
+            new Car { Id = "4", Nombre = "Chevrolet", Modelo = "Coupé", Año = "2003", Precio = "$5000", FechaCreacion = DateTime.Now },
+            new Car { Id = "5", Nombre = "BMW", Modelo = "Convertible", Año = "2020", Precio = "$5000", FechaCreacion = DateTime.Now },
+            new Car { Id = "6", Nombre = "Mercedes", Modelo = "Lujo", Año = "2015", Precio = "$5000", FechaCreacion = DateTime.Now },
+            new Car { Id = "7", Nombre = "Tesla", Modelo = "Eléctrico", Año = "2025", Precio = "$100000", FechaCreacion = DateTime.Now },
+            new Car { Id = "8", Nombre = "Mazda", Modelo = "Hatchback", Año = "2005", Precio = "$6000", FechaCreacion = DateTime.Now },
+            new Car { Id = "9", Nombre = "Nissan", Modelo = "Crossover", Año = "2004", Precio = "$4000", FechaCreacion = DateTime.Now },
+            new Car { Id = "10", Nombre = "Hyundai", Modelo = "Compacto", Año = "2000", Precio = "$5000", FechaCreacion = DateTime.Now }
         };
 
         [Route("cars/lista")]
@@ -41,15 +41,6 @@ namespace PP1_GrupoA.Controllers
         [Route("cars/create")]
         public ActionResult Crear(Car car)
         {
-            if (ModelState.IsValid)
-            {
-                int nuevoId = cars.Count > 0 ? cars.Max(c => int.Parse(c.Id)) + 1 : 1;
-                car.Id = nuevoId.ToString();
-                car.FechaCreacion = DateTime.Now;
-                cars.Add(car);
-
-                return RedirectToAction("Index");
-            }
 
             return View(car);
         }
@@ -92,8 +83,10 @@ namespace PP1_GrupoA.Controllers
             var carExistente = ObtenerCarPorId(car.Id);
             if (carExistente != null)
             {
-                carExistente.Nombre = car.Nombre;
-                carExistente.Descripcion = car.Descripcion;
+                carExistente.Marca = car.Marca;
+                carExistente.Modelo = car.Modelo;
+                carExistente.Año = car.Año;
+                carExistente.Precio = car.Precio;
                 carExistente.FechaCreacion = car.FechaCreacion;
             }
         }

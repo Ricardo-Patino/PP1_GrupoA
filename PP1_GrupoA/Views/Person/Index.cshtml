@@ -10,10 +10,11 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
+                <th>Puesto</th>
                 <th>Email</th>
                 <th>Teléfono</th>
                 <th>Fecha de Nacimiento</th>
-                <th>Edad</th>
+                <th>Fecha de Creacion</th>
             </tr>
         </thead>
         <tbody>
@@ -24,10 +25,10 @@
                     <td>@person.Nombre</td>
                     <td>@person.Apellido</td>
                     <td>@person.Descripcion</td>
-                    <td>@person.FechaCreacion</td>
+                    <td>@person.Email</td>
                     <td>@person.Telefono</td>
                     <td>@person.FechaNacimiento.ToShortDateString()</td>
-                    <td>@(DateTime.Now.Year - person.FechaNacimiento.Year)</td>
+                    <td>@person.FechaCreacion</td>
                 </tr>
 
                 if (int.Parse(person.Id) % 2 != 0)

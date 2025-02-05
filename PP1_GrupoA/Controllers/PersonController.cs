@@ -11,16 +11,16 @@ namespace PP1_GrupoA.Controllers
     {
         private static List<Person> persons = new List<Person>
         {
-            new Person { Id = "1", Nombre = "Alice", Apellido = "Ramos", Descripcion = "Ingeniera", FechaCreacion = DateTime.Now },
-            new Person { Id = "2", Nombre = "Bob", Apellido = "Fonseca",Descripcion = "Doctor", FechaCreacion = DateTime.Now },
-            new Person { Id = "3", Nombre = "Charlie",Apellido = "Castro", Descripcion = "Artista", FechaCreacion = DateTime.Now },
-            new Person { Id = "4", Nombre = "David", Apellido = "Pacheco",Descripcion = "Músico", FechaCreacion = DateTime.Now },
-            new Person { Id = "5", Nombre = "Emma", Apellido = "Brown",Descripcion = "Diseñadora", FechaCreacion = DateTime.Now },
-            new Person { Id = "6", Nombre = "Frank", Apellido = "Arce", Descripcion = "Escritor", FechaCreacion = DateTime.Now },
-            new Person { Id = "7", Nombre = "Grace", Apellido = "Vega", Descripcion = "Fotógrafa", FechaCreacion = DateTime.Now },
-            new Person { Id = "8", Nombre = "Hank", Apellido = "Ramirez", Descripcion = "Chef", FechaCreacion = DateTime.Now },
-            new Person { Id = "9", Nombre = "Ivy", Apellido = "Benavidez",Descripcion = "Enfermera", FechaCreacion = DateTime.Now },
-            new Person { Id = "10", Nombre = "Jack", Apellido = "Chavez",Descripcion = "Científico", FechaCreacion = DateTime.Now }
+            new Person { Id = "1", Nombre = "Alice", Apellido = "Ramos", Descripcion = "Ingeniera", Email = "ejemplo1@mail.com", Telefono = "(555) 123-4567", FechaCreacion = DateTime.Now },
+            new Person { Id = "2", Nombre = "Bob", Apellido = "Fonseca",Descripcion = "Doctor", Email = "prueba2@mail.com", Telefono = "(555) 987-6543", FechaCreacion = DateTime.Now },
+            new Person { Id = "3", Nombre = "Charlie",Apellido = "Castro", Descripcion = "Artista", Email = "usuario3@mail.com", Telefono = "(555) 654-3210", FechaCreacion = DateTime.Now },
+            new Person { Id = "4", Nombre = "David", Apellido = "Pacheco",Descripcion = "Músico", Email = "ficticio4@mail.com", Telefono = "(555) 321-0987", FechaCreacion = DateTime.Now },
+            new Person { Id = "5", Nombre = "Emma", Apellido = "Brown",Descripcion = "Diseñadora", Email = "correo5@mail.com", Telefono = "(555) 567-1234", FechaCreacion = DateTime.Now },
+            new Person { Id = "6", Nombre = "Frank", Apellido = "Arce", Descripcion = "Escritor",Email = "demo6@mail.com", Telefono = "(555) 432-8765",  FechaCreacion = DateTime.Now },
+            new Person { Id = "7", Nombre = "Grace", Apellido = "Vega", Descripcion = "Fotógrafa", Email = "test7@mail.com", Telefono = "(555) 789-6540", FechaCreacion = DateTime.Now },
+            new Person { Id = "8", Nombre = "Hank", Apellido = "Ramirez", Descripcion = "Chef", Email = "cuenta8@mail.com", Telefono = "(555) 345-6789", FechaCreacion = DateTime.Now },
+            new Person { Id = "9", Nombre = "Ivy", Apellido = "Benavidez",Descripcion = "Enfermera", Email = "ejemplo9@mail.com", Telefono = "(555) 876-5432", FechaCreacion = DateTime.Now },
+            new Person { Id = "10", Nombre = "Jack", Apellido = "Chavez",Descripcion = "Científico",Email = "ficticio10@mail.com", Telefono = "(555) 210-9876",  FechaCreacion = DateTime.Now }
         };
 
         [Route("persons/lista")]

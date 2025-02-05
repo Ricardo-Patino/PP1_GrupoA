@@ -15,14 +15,14 @@ namespace PP1_GrupoA.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Aplicación con mvc framework 4.X, que inicie una aplicación web.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Aplicación para Práctica Programada 1";
             
             return View();
         }

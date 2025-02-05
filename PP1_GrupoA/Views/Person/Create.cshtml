@@ -6,7 +6,7 @@
 }
 
 <h2>Agregar Persona</h2>
-<br>
+<br />
 
 @using (Html.BeginForm("Create", "Person", FormMethod.Post))
 {
@@ -25,12 +25,17 @@
 
     </tr>
     <tr>
+        <td> @Html.LabelFor(model => model.Email)</td>
+        <td> @Html.TextBoxFor(model => model.Email)</td>
+
+    </tr>
+    <tr>
         <td> @Html.LabelFor(model => model.Telefono)</td>
         <td> @Html.TextBoxFor(model => model.Telefono)</td>
 
     </tr>
-    <br>
-    <br>
+    <br />
+    <br />
     <input type="submit" value="Agregar Persona" />
 
 }

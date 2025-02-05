@@ -8,25 +8,25 @@
 
 @using (Html.BeginForm("Create", "Job", FormMethod.Post))
 {
-    @Html.LabelFor(model => model.Nombre)
-    @Html.TextBoxFor(model => model.Nombre)
-    <br />
+    <tr>
+        <td>  @Html.LabelFor(model => model.Nombre)</td>
+        <td>  @Html.TextBoxFor(model => model.Nombre)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Descripcion)</td>
+        <td>@Html.TextBoxFor(model => model.Descripcion)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Estado)</td>
+        <td>@Html.TextBoxFor(model => model.Estado)</td>
+    </tr>
 
-    @Html.LabelFor(model => model.Descripcion)
-    @Html.TextBoxFor(model => model.Descripcion)
+    <tr>
+        <td>@Html.LabelFor(model => model.FechaCreacion)</td>
+        <td>@Html.TextBoxFor(model => model.FechaCreacion)</td>
+    </tr>
     <br />
-
-    @Html.LabelFor(model => model.Estado)
-    @Html.TextBoxFor(model => model.Estado)
     <br />
-
-    @Html.LabelFor(model => model.FechaCreacion)
-    @Html.TextBoxFor(model => model.FechaCreacion)
     <br />
-
-    @Html.LabelFor(model => model.FechaModificacion)
-    @Html.TextBoxFor(model => model.FechaModificacion)
-    <br />
-
     <input type="submit" value="Agregar Job" />
 }

@@ -3,7 +3,26 @@
 }
 <main aria-labelledby="title">
     <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
+    <h3>Sobre el proyecto</h3>
 
-    <p>Use this area to provide additional information.</p>
+    <p>
+        Descripción
+        Utilizando los conceptos vistos en clase deberá crear una aplicación nueva en asp.net mvc framework 4.X que inicie una aplicación web. Esta debe estar formada por tres controllers y cada controller con una vista que permita visualizar una lista de models (relacionada a cada controller) y aplicar los diferentes RazorViewEngine tags (if, for, foreach, switch). Ademas debe agregar una pantalla para "crear" que realice un POST al controller y que salve un item a cada lista. Puesto que no va a persistir en memoria, únicamente durante la operación en cuestión, este POST request debe devolver la lista existente más el ítem agregado.
+        Indicaciones:
+    </p>
+    <ol>
+        <li>Crear tres modelos: Person, Car, Job.
+        <li>Cada clase debe tener mínimo: string: Id, string: Name, string: Description, DateTime: DateCreated.</li>
+        <li>Debe crear al menos 10 objetos por Model en memoria (lista, ienumerable, etc) para mostrarlos en los views.</li>
+        <li>Agregar un controller por cada model</li>
+        <li>Debe agregar los métodos que considere necesarios para mostrar la lista</li>
+        <li>En la vista debe utilizar los tags de RazorViewEngine:</li>
+        -   FOR o FOREACH: para mostrarlos todos.</br>
+        -   IF que agregue algún texto adicional cuyo ID sea número impar.</br>
+        -   SWITCH que aplique algún color / estilo en CSS a los IDs pares y otro a los impares</br>
+        <li>Crear un View adicional por Model/Controller para crear un objeto dentro de la lista utilizando un Http POST.</li>
+        <li>El mismo método de POST debe retornar toda la lista más el objeto creado.</li>
+        <li>Namespace debe ser ProgramacionAvanzada.Web</li>
+    </ol>
+
 </main>

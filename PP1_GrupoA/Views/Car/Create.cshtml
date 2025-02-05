@@ -16,7 +16,15 @@
         <td> @Html.LabelFor(model => model.Modelo)</td>
         <td> @Html.TextBoxFor(model => model.Modelo)</td>
     </tr>
-    <br>
-    <br>
+    <tr>
+        <td> @Html.LabelFor(model => model.Año)</td>
+        <td> @Html.TextBoxFor(model => model.Año)</td>
+    </tr>
+    <tr>
+        <td> @Html.LabelFor(model => model.Precio)</td>
+        <td> @Html.TextBoxFor(model => model.Precio)</td>
+    </tr>
+    <br />
+    <br />
     <input type="submit" value="Agregar Carro" />
 }
