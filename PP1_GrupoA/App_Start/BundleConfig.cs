@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace PP1_GrupoA
+namespace ProgramacionAvanzada.Web
 {
     public class BundleConfig
     {

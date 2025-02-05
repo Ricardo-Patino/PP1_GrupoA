@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using PP1_GrupoA.Models;
 
-namespace PP1_GrupoA.Controllers
+namespace ProgramacionAvanzada.Web.Controllers
 {
     public class PersonController : Controller
     {

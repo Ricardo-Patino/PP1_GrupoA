@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace PP1_GrupoA
+namespace ProgramacionAvanzada.Web
 {
     public class FilterConfig
     {

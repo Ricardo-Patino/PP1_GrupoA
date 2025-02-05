@@ -19,7 +19,7 @@ namespace PP1_GrupoA.Models
         public void MostrarInformacion()
         {
             Console.WriteLine($"Id: {Id}");
-            Console.WriteLine($"Marca: {Marca}");
+            Console.WriteLine($"Nombre: {Nombre}");
             Console.WriteLine($"Modelo: {Modelo}");
             Console.WriteLine($"Año: {Año}");
             Console.WriteLine($"Precio: {Precio}");
